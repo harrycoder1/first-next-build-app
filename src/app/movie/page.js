@@ -1,0 +1,51 @@
+
+import axios from 'axios';
+import MovieData from '../components/MovieData';
+import { Suspense } from 'react';
+
+const options = {
+  method: 'GET',
+  url: 'https://netflix54.p.rapidapi.com/search/',
+  params: {
+    query: 'stranger',
+    offset: '0',
+    limit_titles: '50',
+    limit_suggestions: '20',
+    lang: 'en'
+  },
+  headers: {
+    'X-RapidAPI-Key': 'b1fb5694b0msh8be34599481e19cp1726abjsne3781322c530',
+    'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
+  }
+};
+
+
+let response=[]
+export default async function  page() {
+    if(response.length===0){
+      response = await axios.request(options);
+
+    }
+	const d = response.data.titles;
+   
+
+
+  return (
+    <div>
+      <h1 className='text-2xl text-purple-500 drop-shadow-lg font-bold text-center '> All Content here :-</h1>
+      <div className='flex justify-center items-center'>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2'>
+<Suspense fallback={<h1 className='text-4xl text-red'></h1>}>
+      {
+      await d?.map((mve)=>{
+        return <MovieData key={mve.id} {...mve} />
+
+      })
+    }
+    </Suspense>
+    </div>
+</div>
+</div>
+
+  )
+}
