@@ -14,8 +14,8 @@ const options = {
     lang: 'en'
   },
   headers: {
-    'X-RapidAPI-Key': 'b1fb5694b0msh8be34599481e19cp1726abjsne3781322c530',
-    'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
+    'X-RapidAPI-Key':process.env.RAPID_KEY ,
+    'X-RapidAPI-Host': process.env.RAPID_HOST
   }
 };
 
