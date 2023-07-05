@@ -1,9 +1,9 @@
 import mongoose from "mongoose"
 import dot from 'dotenv'
 dot.config()
-const MONGODB_URL = process.env.MONGO_DB_URL;
+const MONGODB_URI = process.env.MONGODB_URI;
 
-if (!MONGODB_URL) {
+if (!MONGODB_URI) {
     throw new Error(
         "Please define the MONGODB_URI environment variable inside .env.local"
     )
