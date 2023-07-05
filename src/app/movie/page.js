@@ -1,4 +1,4 @@
-
+"use client";
 import axios from 'axios';
 import MovieData from '../components/MovieData';
 import { Suspense } from 'react';
