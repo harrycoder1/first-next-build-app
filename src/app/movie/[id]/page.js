@@ -1,5 +1,6 @@
 "use client";
-
+import dot from 'dotenv'
+dot.config()
 import axios from 'axios';
 import Image from 'next/image';
 

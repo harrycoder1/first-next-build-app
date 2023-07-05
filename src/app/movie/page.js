@@ -1,8 +1,10 @@
 "use client";
 import axios from 'axios';
-import MovieData from '../components/MovieData';
-import { Suspense } from 'react';
+import dot from 'dotenv'
+dot.config()
 
+import MovieData from '../components/MovieData';
+import { Suspense, useEffect ,useState } from 'react';
 const options = {
   method: 'GET',
   url: 'https://netflix54.p.rapidapi.com/search/',
@@ -22,11 +24,20 @@ const options = {
 
 let response=[]
 export default async function  page() {
-    if(response.length===0){
-      response = await axios.request(options);
+  console.log(process.env.RAPID_KEY)
+// const [d , setD] =useState([])
+  // useEffect(()=>{
+    // const fetches=async()=>{
+      if(response.length===0){
+        response = await axios.request(options);
+  // setD(de)
+      }
+      const d = response.data.titles; 
 
-    }
-	const d = response.data.titles;
+    // }
+  // fetches();
+//  },[])
+   
    
 
 

@@ -18,7 +18,7 @@ Our movie pages are designed to provide you with detailed descriptions, trailers
 
 
         </div>
-        <div className="right  w-[100%] md:w-1/2"><Image src="/about-us.svg" width={30} height={30} className="h-auto w-[380px] md:w-[450px] lg:w-[560px] xl:w-[700px]" /></div>
+        <div className="right  w-[100%] md:w-1/2"><Image src="/about-us.svg" width={30} height={30} alt={"about us"} className="h-auto w-[380px] md:w-[450px] lg:w-[560px] xl:w-[700px]" /></div>
 
     </div>
     </>

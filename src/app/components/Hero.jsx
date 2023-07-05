@@ -14,7 +14,7 @@ export default function Hero() {
 <button className="px-3 py-2 border-purple-600 text-purple-600 bg-purple-50"><Link href="/movie"> View More ...</Link></button>
         </div>
         <div className="right w-1/2 flex justify-center items-center">
-        <Image src={'/vedio.svg'} width={300} height={300}  className="h-auto w-[330px] md:w-[450px] lg:w-[650px] "/> </div>
+        <Image src={'/vedio.svg'} width={300} height={300} alt={"home page"}  className="h-auto w-[330px] md:w-[450px] lg:w-[650px] "/> </div>
     </div>
   
     </>

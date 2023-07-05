@@ -7,7 +7,7 @@ const Footer = () => {
    
 
       </div>
-      <div className="image -z-10 opacity-70"><Image src={'/vv.png'} width={300} height={200} className='w-full h-auto absolute top-0 left-0' /></div>
+      <div className="image -z-10 opacity-70"><Image src={'/vv.png'} width={300} height={200} alt='footer' className='w-full h-auto absolute top-0 left-0' /></div>
     </div>
   )
 }
