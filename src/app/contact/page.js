@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 
-const page = () => {
+const Page = () => {
   const [user , setUser] = useState({name:"" , email:"" , message:"" , phone:""})
   const [status ,setStatus] =useState(null)
   const handleChange=(e)=>{
@@ -87,4 +87,4 @@ console.log(e)
   )
 }
 
-export default page
+export default Page
