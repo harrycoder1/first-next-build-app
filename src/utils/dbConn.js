@@ -1,6 +1,7 @@
 import mongoose from "mongoose"
-
-const MONGODB_URL = process.env.MONGO_DB;
+import dot from 'dotenv'
+dot.config()
+const MONGODB_URL = process.env.MONGO_DB_URL;
 
 if (!MONGODB_URL) {
     throw new Error(
